@@ -1,18 +1,21 @@
 @import "tailwindcss";
+@config "../../tailwind.config.ts";
+
+@custom-variant dark (&:where(.dark, .dark *));
 
 *,
 *::before,
-*::after{
+*::after {
   box-sizing: border-box;
 }
 
 html,
 body,
 #root,
-.app{
+.app {
   height: 100%;
   width: 100%;
   @apply text-sm;
-  @apply bg-gray-500;
-  @apply text-gray-900;
+  @apply bg-white;
+  @apply dark:bg-black;
 }
